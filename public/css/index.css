@@ -1,7 +1,75 @@
+/* :root {
+  background:purple;
+}
+  
 html {
   max-width: 720px;
+
+  background: blue;
 }
 
 body {
   background: #fff;
+}
+
+* {
+  color: red;
+}
+
+h1 {
+  color:green;
+}
+
+.box{
+  background:#beb2b2;
+}
+
+#user {
+  color: blue;
+}
+
+h1, h2, button {
+  color: green;
+}
+
+.button {
+  background:red
+}
+
+#box > p {
+  color: paleturquoise
+}
+
+.user-last {
+  color:palevioletred
+}
+
+.card-dark {
+  background: rgb(182, 174, 159);
+} */
+
+
+.card > p {
+  color: green;
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke: 1px blue;
+}
+
+p:focus,
+ p:active,
+ p:hover {
+  -webkit-text-fill-color: rgb(255, 0, 217);
+  -webkit-text-stroke: 1px rgb(217, 255, 0);
+
+  direction: rtl;
+}
+
+#test {
+  color: initial;
+  -webkit-text-fill-color: initial;
+  -webkit-text-stroke: 1px initial;
+}
+
+* {
+  font-family: fantasy;
 }
