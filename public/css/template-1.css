@@ -10,6 +10,9 @@
 
  .header {
   padding: 24px;
+
+  border-bottom: 1px solid #dec2de;
+
  }
 
  .header_logo {
@@ -61,6 +64,9 @@ display: block;
 
  .footer {
   padding: 24px 0;
+
+  
+  border-top: 1px solid #dec2de;
  }
 
  .footer_copy_right {
@@ -84,6 +90,7 @@ display: block;
   font-weight: 500;
   margin-bottom: 12px;
   text-align: center;
+
  }
 
  .hero_text {
@@ -91,8 +98,9 @@ display: block;
   font-size: 20px;
   text-align: center;
   max-width: 585px;
+  margin: 0 auto;
 
-  margin-left: 185px;;
+  line-height: 150%;
  }
 
  .plans_card:not(:last-of-type) {
@@ -147,3 +155,44 @@ display: block;
   font-size: 19px;
   padding: 9px;
  }
+
+ .card {
+ 
+  border: 2px solid blue;
+  border-radius: 15px;
+
+ 
+ }
+
+ .card:hover {
+  outline: 2px solid red;
+  outline-offset: 5px;
+  box-shadow: 5px 5px 10px 1px red;
+  cursor: pointer;
+
+ }
+
+.btn {
+  border-radius: 50%;
+}
+
+.btn:hover {
+  box-shadow: 5px 5px 10px 1px red;
+}
+
+h1 {
+  text-shadow: 2px 2px red;
+}
+
+.plans_card:nth-child(2) {
+ visibility: hidden;
+}
+
+p {
+  background: gray;
+  width: 200px;
+  height: 100px;
+
+  overflow: scroll;
+}
+ 
