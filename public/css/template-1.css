@@ -38,7 +38,8 @@ display: block;
 
  .nav_link:hover {
   text-decoration: underline;
-  color: blue;
+
+  opacity: 50%;
  }
 
  .nav_vertical > .nav_link{
@@ -170,6 +171,8 @@ display: block;
   box-shadow: 5px 5px 10px 1px red;
   cursor: pointer;
 
+  opacity: 0.5;
+
  }
 
 .btn {
@@ -195,4 +198,70 @@ p {
 
   overflow: scroll;
 }
+
+body {
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+  rgba(127, 106, 255, 0.4) 0%,
+  rgba(255, 255, 255, 0) 100%
+  );
+}
  
+.page {
+  background-color: transparent;
+}
+
+.hero_text {
+  background-image: url('/img/test2.png');
+  border: 20px solid red;
+  color: green;
+  padding: 40px;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.card_block {
+  /* list-style-type: upper-alpha; */
+  list-style-position: inside;
+
+  list-style-image: linear-gradient(
+    to bottom right,
+     blue,
+      red
+      );
+
+  padding: 0;
+}
+
+.card_description_item {
+  display: list-item;
+}
+
+/* .table tr {
+  border: 1px solid #08080a;
+} */
+
+.table tr td {
+  border: 1px solid #064445;
+  border-bottom-color: red;
+  border-right-color: blue;
+
+}
+
+.table {
+  table-layout: auto;
+  width: 200px;
+
+  border-collapse: unset;
+
+  border-spacing: 20px 10px;
+
+  caption-side: top;
+
+  empty-cells: hide;
+}
+
+.nav_link::before, .nav_link::after {
+  content: open-quote;
+}

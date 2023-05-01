@@ -301,3 +301,24 @@ display: block;
  .link_item:hover {
   text-decoration: underline;
  }
+
+ .flex-container {
+  display: flex;
+
+  flex-direction: row;
+
+   justify-content: flex-start;
+   align-content: flex-end;
+
+  flex-wrap: wrap;
+
+  height: 800px;
+
+  border: 1px solid red;
+ }
+
+ .flex-item {
+  width: 200px;
+  background: gray;
+  margin: 15px;;
+ }
