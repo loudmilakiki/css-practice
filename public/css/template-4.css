@@ -14,7 +14,6 @@
   --border-radius: 12px;
   --color-title:  #212529;
   --color-text: #343A40;
-  --color-button: #6C757D;
 
   --weight-title: 500;
   --weight-text:400;
@@ -118,124 +117,149 @@
    font-weight: var(--weight-title)
  }
 
-.hero {
+ .main {
   display: flex;
-  align-items: center;
-  gap: var(--space-b);
+  flex-direction: row-reverse;
+  align-items: center; 
+  
+  gap: 80px;
+  border-bottom: 1px;
+ }
 
-  padding: var(--space-b);
-  border-bottom: 1px solid var(--border-radius);
-}
-
-.hero_image {
+ .main_image {
   width: 500px; 
   height: 500px;
-  border-radius: var( --border-radius);
-}
+ }
 
-.hero_content {
+ .main_content {
   display: flex;
   flex-direction: column;
-  gap: var(--space-l)
-}
+  gap: var(--size-l);
+  
+ }
 
-.hero_title {
-  font-size: 50px;
-  color: var(--color-title);
-  font-weight: var(--weight-title);
+ .main_heading {
+  font-size: var(--space-b);
+  color: var(--color-text);
+  font-weight: 500;
   line-height: 120%;
-}
+ }
 
-.hero_text {
-  color: var(--color-text);
-  font-size: var(--size-l);
-  font-weight: var(--weight-text);
-  line-height: 170%;
-}
-
-.blog {
-  display: flex;
-  gap: var(--space-b);
-
-  padding: var(--space-b);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.card {
- display: flex;
- flex-direction: column;
- align-items: center;
- text-align: center;
- gap: var(--space-l);
-}
-
-.card_image {
-  height: 140px;
-  width: 140px;
-  border-radius: 50%;
-}
-
-.card_title {
-  font-size: 32px;
-  font-weight: var(--weight-title);
-  color: var(--color-title);
-}
-
-.card_text {
-  font-weight: var(--weight-text);
-  font-size: var(--size-d);
-  color: var(--color-text);
-}
-
-.button {
+ .button {
   display: inline-block;
   font-size: var(--size-d);
-  text-decoration: none;
+  justify-content: flex-start;
   padding: var(--space-m) var(--space-xm);
   border-radius: var(--border-radius);
-}
+  width: 120px;
+  
+ }
 
-.card_button {
- color: var(--color-white);
-background-color: var(--color-primary);
-}
+ .main_button {
+  color: var(--color-white);
+  background-color: #4c4f52;
+  border-bottom: 1px solid var(--color-title);
+ }
 
-.button:hover {
+ .button:hover {
   opacity: 0.7;
 }
 
-.form {
+.featured {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  background: var(--color-primary);
-  padding: var(--space-l);
-  border-radius: var(--border-radius);
+ margin-top: 80px;
+ margin-bottom: 80px;
+ gap: 24px;
+ border-bottom: 1px solid var(--color-title);
 }
 
-.form_content {
+.card {
   display: flex;
   flex-direction: column;
-  gap: var(--space-m);
+  justify-content: space-between;
+  padding: 24px 26px;
+
+  width: 320;
 }
 
-.form_title {
-  font-size: 27px;
-  font-weight: var(--weight-title);
-  color: var(--color-white);
+.card_photo {
+  height: 64px;
+  width: 64px;
+  border-radius: 18%;
 }
 
-.form_info {
+.featured_heading {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.featured_info {
+  display: block;
+ font-size: 16px;
+ padding-block: var(--space-l);
+}
+
+.featured_text {
+  color: #0D6EFD;
+padding-block: 24px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+ justify-content:space-between;
+
+ background-color: #563D7C;
+
+ width: 960px;
+ padding: 24px;
+ border-radius: var(--border-radius);
+ 
+ margin-bottom: 80px;
+ margin-top: 80px;
+
+ gap: 16px;
+
+}
+
+.action_contentn {
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+
+}
+
+.actions_heading {
+  color: #fff;
+  font-size: 28px;
+  padding-bottom: 12px;
+ 
+}
+  
+.botton {
+  display: inline-block;
   font-size: var(--size-d);
-  font-weight: var(--weight-text);
-  color: var(--color-white);
+  justify-content: center;
+  border-radius: var(--border-radius);
+  padding: var(--space-m)  var(--space-xm);
+  width: 240px;
 }
 
+.actions_botton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: auto;
+  align-items: center;
 
-.form_button {
- background-color: var(--color-white);
- width: 100%;
- max-width: 160px;
- color: var(--color-text);
+  background-color: #fff;
+  color: var(--color-button);
+
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.actions_text {
+  text-align: center;
+  font-size: 28px;
 }
