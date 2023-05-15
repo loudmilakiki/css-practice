@@ -133,7 +133,7 @@
  }
 
  .ad_logo {
-    justify-content: center;
+  justify-content: center;
   font-weight: var(--font-weight);
   color: #885FFB;
   background-color: rgba(136, 95, 251, 0.2);
