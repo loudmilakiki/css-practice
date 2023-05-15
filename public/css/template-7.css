@@ -281,9 +281,6 @@
     width: 100%;
     gap: 18px;
 
-    width: 333.67px;
-    height: 380px;
-
 }
 
 .articles_img {
@@ -326,21 +323,22 @@
     align-items: flex-start;
 }
 
-.button {
+.botton {
     display: flex;
     flex-direction: row;
     background:  #885FFB;
     width: 85px;
-    height: var(--space-xl);
+   height: 40px;
     border-radius: var(--border-radius);
     align-items: center;
     justify-content: center;
     gap: var(--space-s);
 
+
 }
 
 
-.button:hover {
+.botton:hover {
  opacity: 0.7;
  transform: scale(1.2);
  color: var(--color-white);
