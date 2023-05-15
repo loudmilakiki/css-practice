@@ -1,0 +1,35 @@
+{{#with header}}
+
+  <div class='header_top'>
+
+    <div class='link_wrapper'>
+
+      <span class='logo'>{{brandName}}</span>
+
+      <div class='links'>
+        {{#each links}}
+          <div class='link_item'>
+            {{#with this}}
+              <a href='{{url}}' class='link'>{{text}}</a>
+            {{/with}}
+          </div>
+        {{/each}}
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class='header_bottom'>
+
+    <div class='ad_link'>
+
+      {{#with ad}}
+        <span class='ad_logo'>AD</span>
+        <span class='ad'>{{text}}: {{url}}</span>
+      {{/with}}
+    </div>
+    <a class='user'>User online:{{userOnline}}</a>
+  </div>
+
+{{/with}}

@@ -1,0 +1,16 @@
+<div class='articles'>
+  {{#each articles}}
+
+    <div class='card'>
+
+      <img src='{{photo}}' class='articles_img' />
+      {{#if isNew includeZero=true}}<button
+          class='articles_badge'
+        >NEW</button>{{/if}}
+      <h2 class='articles_name'>{{name}}</h2>
+      <p class='articles_descript'>{{description}}</p>
+      <button class='button'>Read All</button>
+    </div>
+
+  {{/each}}
+</div>

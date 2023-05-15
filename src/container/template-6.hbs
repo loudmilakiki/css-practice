@@ -37,9 +37,10 @@
         {{#each list}}
         
           <div class="list">
-             <img src="img" class="list_img">
+             <span class="updates_item_logo {{#if @first}}color_blue{{/if}} 
+             {{#if @last}}color_purple{{/if}}">32x32</span>
              <div class="list_cart">
-          <a class="list_nickname">{{nickname}}</a>
+          <a class="list_nickname">@{{nickname}}</a>
          
           <p class="list_descript">{{description}}</p>
           </div>
