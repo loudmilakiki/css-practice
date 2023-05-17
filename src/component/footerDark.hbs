@@ -1,0 +1,11 @@
+{{#with footer}}
+  <div class='copyright'>
+    <span>{{copyright}}</span>
+  </div>
+
+  <div class='pages'>
+    {{#each pages}}
+      <span class='{{path}}'>{{name}}</span>
+    {{/each}}
+  </div>
+{{/with}}

@@ -1,3 +1,6 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
  :root {
   --space-s: 8px;
   --space-m: 12px;
@@ -190,8 +193,9 @@ gap: 80px;
       font-size: var(--size-d);
       font-weight: var(--weight-text);
       color: #6c757d;
-      border-top: 1px solid  #CED4DA;
+      border-top: 1px solid #CED4DA;
       padding-top:var(--size-l);
+      line-height: 100%;
     }
 
     .form_button {
@@ -294,13 +298,25 @@ gap: 80px;
    
       padding: var(--space-l);
      gap: var(--space-s);
-     
+
     }
 
-    .list_img {
-      width: 32px;
-      height: 32px;
+    .updates_item_logo {
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      padding-top: 16px;
       position: relative;
+      background: #E83EBC;
+      color: black;  
+      }
+
+    .color_blue {
+      background-color: #007BFF;
+    }
+
+    .color_purple {
+      background-color: blueviolet;
     }
 
     .list_cart {
@@ -315,6 +331,7 @@ gap: 80px;
       gap: var(--space-l);
       color: #6c757d;
       padding: var(--space-s);
+      text-transform: lowercase;
      
     }
 
@@ -346,8 +363,8 @@ line-height: 120%;
     }
 
     .card {
- display: flex;
-align-items: center;
+   display: flex;
+  align-items: center;
 
  gap: var(--space-l);
 
@@ -361,6 +378,8 @@ align-items: center;
      align-items: flex-start;
      padding: var(--space-xm);
      gap: var(--space-s);
+     width: 298px;
+     height: 254px;
     }
 
     .list_name {
