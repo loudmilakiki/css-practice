@@ -1,3 +1,18 @@
+@import '/css/var.css';
+
+font-face {
+  font-size: 'Segment';
+  src: url('/font/Segment-Regular.otf');
+  font-weight: 400;
+}
+
+font-face {
+  font-size: 'Segment';
+  src: url('/font/Segment-SemiBold.otf');
+  font-weight: 600;
+}
+@layer normalize, main, component, style;
+
 @keyframes fly{
  from {
   top: 0;
@@ -16,7 +31,7 @@
 
   background: yellow;
 
-  width: 100px;
+  width: 100px; 
  }
  to {
   top: 0;
@@ -25,30 +40,7 @@
   background: purple;
  }
 }
-  :root {
 
-  --space-m: 12px;
-  --space-xm: 16px;
-  --space-l: 24px;
-  --space-b: 36px;
-
-  --size-s: 14px;
-  --size-d: 16px;
-  --size-l: 20px;
-
-  --color-border: #dec2de;
-  --color-primary: rgb(18, 18, 223);
-  --color-white: #fff;
-  --border-radius: 12px;
-  --color-title:  #212529;
-  --color-text: #343A40;
-  --color-button: #6C757D;
-
-  --weight-title: 500;
-  --weight-text:400;
-
-  --page-width: 960px;
- }
  
  /* *********************/
  .page {
@@ -229,30 +221,37 @@
   color: var(--color-text);
 }
 
-.button {
-  display: inline-block;
-  font-size: var(--size-d);
-  text-decoration: none;
-  padding: var(--space-m) var(--space-xm);
-  border-radius: var(--border-radius);
-  text-align: center;
-
-  transition: opacity 1s, background-color, color;
-  transition-duration: 1s;
+@layer main {
+  .button {
+    display: inline-block;
+    font-size: var(--size-d);
+    text-decoration: none;
+    padding: var(--space-m) var(--space-xm);
+    border-radius: var(--border-radius);
+    text-align: center;
+  
+    transition: opacity 1s, background-color, color;
+    transition-duration: 1s;
+  }
+  
+  .button:hover {
+    opacity: 0.7;
+    background-color: yellow;
+    color: red;
+  }
 }
 
-.card_button {
- color: var(--color-white);
-background-color: var(--color-primary);
-transition-property: opacity, background-color;
 
+@layer component {
+  .card_button {
+    color: var(--color-white);
+   background-color: var(--color-primary);
+   transition-property: opacity, background-color;
+  
+   }
 }
 
-.button:hover {
-  opacity: 0.7;
-  background-color: yellow;
-  color: red;
-}
+
 
 .form {
   display: flex;
@@ -370,4 +369,106 @@ body:hover .modal {
 
 .modal_text {
   clear: left;
+}
+
+.input {
+  caret-color: var(--color-primary);
+  border: 1px solid var(--color-title);
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media all and (width <= 600px) {
+  .blog {
+    grid-template-columns: repeat 1fr;
+  }
+}
+
+@media all and (600px < width <= 800px) {
+  .blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* @media all and (min-height: 600px) {
+  .page_content {
+    background: red;
+  }
+} */
+
+.form {
+  gap: var(--space-l);
+}
+
+@media all and (width <= 560px) {
+  .form {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+.form_info {
+  max-width: 300px;
+  width: 100%;
+  line-height: 150%;
+}
+
+.form_content {
+  align-items: center;
+  text-align: center;
+}
+
+.hero_container {
+  container-type: inline-size;
+  container-name: hero;
+  
+}
+
+@container hero (width < 960px) {
+.hero {
+  flex-direction: column;
+}
+}
+
+@layer style {
+.card_button {
+ background: red;
+}
+}
+
+@layer main {
+  .card_button {
+    background: yellow;
+  }
+}
+
+.ex {
+  display: inline-block;
+  font-size: 1.5em;
+  margin-left: 1ex;
+
+  line-height: 1.5em;
+}
+
+/* .test {
+  position: absolute;
+  background: red;
+  top: 0;
+  left: 0;
+
+  height: 100vmax;
+  width: 100vmax;
+  z-index: 9999;
+} */
+
+.hero_title {
+  font-size: 5cqw;
 }
